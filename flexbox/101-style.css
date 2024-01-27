@@ -1,0 +1,46 @@
+/* set of boxes */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 100%;
+}
+
+.box {
+    color: white;
+}
+
+.box1 {
+    background-color: #1FCD6E;
+    flex-basis: content;
+    font-size: 3rem;
+    border: 2rem solid #1FCD6E;
+}
+
+.box2 {
+    background-color: #2A94DE;
+    border: 2rem solid #2A94DE;
+    flex-basis: content;
+    font-size: 6rem;
+}
+
+.box3 {
+    background-color: #304860;
+    border: 2rem solid #304860;
+    flex-basis: content;
+    font-size: 12rem;
+}
+
+.box4 {
+    background-color: #9D55B9;
+    border: 2rem solid #9D55B9;
+    flex-basis: content;
+    font-size: 6rem;
+}
+
+.box5 {
+    background-color: #E77E08;
+    border: 2rem solid  #E77E08;
+    flex-basis: content;
+    font-size: 3rem;
+}
