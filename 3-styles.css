@@ -1,0 +1,119 @@
+:root {
+    --button_bgcolor: #D73953;
+    --button-size: 3rem;
+    --button-animation: 0.1s ease-out;
+    margin: 35px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu-open-button {
+    display: block;
+    border-radius: 50%;
+    background-color: var(--button_bgcolor);
+    height: var(--button-size);
+    width: var(--button-size);
+    margin-bottom: 8px;
+    padding: 1rem;
+    position: relative;
+    z-index: 999;
+}
+
+.menu-line {
+    position: absolute;
+    top: calc(50% - 1.5px);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 3px;
+    background: white;
+    transition: all 0.1s ease-out;
+}
+
+.menu-line-1 {
+    margin-top: -10px;
+}
+
+.menu-line-3 {
+    margin-top: 10px;
+}
+
+.menu-item {
+    background-color: var(--button_bgcolor);
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.menu-open-button:hover {
+    transform: scale(1.2);
+    background-color: #ed3f5c;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-out;
+}
+
+.menu-open-button:hover .menu-line-3 {
+    margin-top: 6px auto;
+}
+
+.menu-open:checked~.menu-open-button,
+.menu-open:checked~.menu-item {
+    height: var(--button-size);
+    width: var(--button-size);
+    font-size: 25px;
+    padding: 1rem;
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-2 {
+    display: none;
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-1 {
+    transform: rotate(45deg);
+    margin-top: 0;
+    transition: var(--button-animation);
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-3 {
+    transform: rotate(-45deg);
+    margin-top: 0;
+    transition: var(--button-animation);
+}
+
+.menu-open:checked~.menu-item {
+    display: flex;
+    animation-timing-function: cubic-bezier(5, 4, 3, 1);
+    animation: border-top-animation 1s ease forwards;
+}
+
+.menu-open:checked~.menu-item:hover {
+    background-color: white;
+    color: var(--button_bgcolor);
+    outline: 0.5px solid var(--button_bgcolor);
+    outline-offset: 0.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes border-top-animation {
+    0% {
+        top: -100px;
+    }
+
+    50% {
+        top: 15px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}

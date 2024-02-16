@@ -1,0 +1,26 @@
+h2 {
+    font-size: 48px;
+    text-align: center;
+    position: relative;
+}
+
+h2 a {
+    text-decoration: none;
+    color: #e41d3e;
+    position: relative;
+}
+
+h2 a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #e41d3e;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+h2 a:hover::after {
+    width: 100%;
+}
