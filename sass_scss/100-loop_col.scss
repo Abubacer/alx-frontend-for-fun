@@ -1,6 +1,4 @@
-/*
-a Sass file that creates classes with different width
-*/
+/* a Sass file that creates classes with different width */
 @use "sass:math";
 
 @for $i from 1 through 4 {
