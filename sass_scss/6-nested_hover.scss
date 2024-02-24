@@ -1,9 +1,9 @@
-/* Changes text color When the user hovers over button tags */
+/* Nested hover button change color when user hover it */
 
 button {
-  color: #FF0000;
+    color: #FF0000;
 
-  &:hover {
-    color: #00FF00;
-  }
+    &:hover {
+        color: #00FF00;
+    }
 }
