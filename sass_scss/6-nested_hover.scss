@@ -1,10 +1,9 @@
-/* Changes text color When
-the user hovers over button tags */
+/* Changes text color When the user hovers over button tags */
 
 button {
-  color: #FF0000;
+  color: #ff0000;
 
   &:hover {
-    color: #00FF00;
+    color: #00ff00;
   }
 }
