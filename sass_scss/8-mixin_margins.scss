@@ -4,8 +4,9 @@ Margin left and right at 10px to body tags
 Margin left and right at 15px to div tags
 */
 
-@mixin set-margin($margin-x, $margin-y: 0) {
-  margin: $margin-x $margin-y;
+@mixin set-margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
 }
 
 body {
