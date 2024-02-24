@@ -39,11 +39,11 @@ $default-sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !defaul
 
     @each $item in $list {
       @if $item == $pivot {
-        $equal: append($equal, $item, comma);
+        $equal: append($equal, $item);
       } @else if _str-compare($item, $pivot, $order) {
-        $less: append($less, $item, comma);
+        $less: append($less, $item);
       } @else {
-        $large: append($large, $item, comma);
+        $large: append($large, $item);
       }
     }
 
